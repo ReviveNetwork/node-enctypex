@@ -6,8 +6,8 @@ using v8::FunctionTemplate;
 // C++ constructs that are exposed to javascript are exported here
 
 NAN_MODULE_INIT(InitAll) {
-  Nan::Set(target, Nan::New("encode").ToLocalChecked(),
-    Nan::GetFunction(Nan::New<FunctionTemplate>(encode)).ToLocalChecked());
+    Nan::Set(target, Nan::New("encode").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(encode)).ToLocalChecked());
+    Nan::Set(target, Nan::New("decode").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(decode)).ToLocalChecked());
 }
 
 NODE_MODULE(NativeExtension, InitAll)

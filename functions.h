@@ -4,5 +4,6 @@
 #include <nan.h>
 
 NAN_METHOD(encode);
+NAN_METHOD(decode);
 
 #endif
