@@ -12,7 +12,7 @@ typedef struct {
 extern "C" int enctypex_quick_encrypt(unsigned char *key, unsigned char *validate, unsigned char *data, size_t size);
 extern "C" unsigned char *enctypex_encoder(unsigned char *key, unsigned char *validate, unsigned char *data, int *datalen, enctypex_data_t *enctypex_data);
 
-extern "C" int enctype2_encoder(unsigned char *key, unsigned char *data, int size) {
+extern "C" int enctype2_encoder(unsigned char *key, unsigned char *data, int size);
 
 using namespace std;
 using namespace v8;
@@ -191,5 +191,5 @@ NAN_METHOD(encode2) {
     // Call our callback
     Local<Value> argv[2] = { Nan::Null(), Nan::NewBuffer((char*)data, newSize).ToLocalChecked() };
     callback.Call(2, argv);
-    
+
 }
