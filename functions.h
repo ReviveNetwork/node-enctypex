@@ -6,4 +6,6 @@
 NAN_METHOD(encode);
 NAN_METHOD(decode);
 
+NAN_METHOD(encode2);
+
 #endif

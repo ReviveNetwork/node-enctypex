@@ -8,6 +8,8 @@ using v8::FunctionTemplate;
 NAN_MODULE_INIT(InitAll) {
     Nan::Set(target, Nan::New("encode").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(encode)).ToLocalChecked());
     Nan::Set(target, Nan::New("decode").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(decode)).ToLocalChecked());
+    
+    Nan::Set(target, Nan::New("encode2").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(encode2)).ToLocalChecked());
 }
 
 NODE_MODULE(NativeExtension, InitAll)
